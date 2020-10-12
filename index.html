@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie rekrutacyjne</title>
+    <link rel="stylesheet" href="styles/style.css"/>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="scripts/mainScript.js"></script>
+    <script src="scripts/validation.js"></script>
+    <script src="scripts/workers.js"></script>
+    <script src="scripts/tasks.js"></script>
+</head>
+
+<body>
+    <div class="form-group">
+
+        <input id="companyName" class="firstInput setInput" name="companyName" type="text" placeholder="Nazwa firmy"
+            onkeyup="setLabel(this)">
+        <label for="companyName">Nazwa firmy</label>
+        <div class="errorMessage">błąd</div>
+    </div>
+    <div class="dropdown">
+        <div class="form-group">
+            <input type="submit" id="worker" class="dropbtn firstInput" name="worker" value="Pracownik">
+            <label for="worker">Pracownik</label>
+            <img id="workerArrow" src="assets/arrow_down.png" alt="arrow_down">
+            <div class="errorMessage">błąd</div>
+        </div>
+        <div class="dropdownContent">
+            <div id="search">
+                <input type="text" placeholder="Search.." id="searchInput" onclick="showDropdown()" onkeyup="filterWorkers()">
+                <img id="vector" src="assets/Vector.png" alt="Vector" onclick="showDropdown()">
+            </div>
+            <div id="workerList">
+            </div>
+        </div>
+    </div>
+    <div>
+        <div id="line"></div>
+        <div id="taskText">Zadania</div>
+        <div class="form-group">
+            <input id="taskName" class="firstInput setInput" name="taskName" type="text" placeholder="Nazwa zadania"
+                onkeyup="setLabel(this)">
+            <label for="taskName">Nazwa zadania</label>
+            <div class="errorMessage">błąd</div>
+        </div>
+        <div class="form-group">
+            <input id="cost" class="firstInput setInput" name="cost" type="text" placeholder="Kwota w PLN"
+                onkeyup="setLabel(this)">
+            <label for="cost">Kwota w PLN</label>
+            <div class="errorMessage">błąd</div>
+        </div>
+        <div id="scaler">
+            1 euro = 4.8282
+        </div>
+        <button id="addTaskBtn" onclick="addTask()">Dodaj</button>
+    </div>
+    <div>
+        <table id="taskTable">
+            <tr class="border">
+                <th onclick="sortBy(1)">Nazwa zadania
+                    <div>
+                        <img class="arrowSortUp" src="assets/arrow_down2.png" alt="arrow_down2">
+                        <img class="arrowSortDown" src="assets/arrow_down2.png" alt="arrow_down2">
+                    </div>
+                </th>
+                <th onclick="sortBy(2)">Kwota w PLN
+                    <div>
+                        <img class="arrowSortUp" src="assets/arrow_down2.png" alt="arrow_down2">
+                        <img class="arrowSortDown" src="assets/arrow_down2.png" alt="arrow_down2">
+                    </div>
+                </th>
+                <th onclick="sortBy(3)">Kwota w EU
+                    <div>
+                        <img class="arrowSortUp" src="assets/arrow_down2.png" alt="arrow_down2">
+                        <img class="arrowSortDown" src="assets/arrow_down2.png" alt="arrow_down2">
+                    </div>
+                </th>
+                <th id="option">Opcje</th>
+            </tr>
+        </table>
+        <div id="amount"></div>
+    </div>
+</body>
+
+</html>

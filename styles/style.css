@@ -1,0 +1,272 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: Source Sans Pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  overflow: hidden;
+}
+
+.firstInput, .dropbtn, .dropdownContent {
+    border: 1px solid #E1E1E1;
+    background-color: white;
+    text-align: left;
+    color: #333333;
+    display: block;
+    padding: 5px 10px;
+    margin: 20px 0;
+    width: 276px;
+    position: relative;
+    left: 336px;
+}
+
+.setInput {
+  width: 256px;
+}
+
+input:focus {
+  outline: 2px solid #00447C;
+}
+
+input:focus + label{ 
+  color: #00447C;
+}
+
+#line {
+  border-top: 1px solid #A2A2A2;
+  width: 276px;
+  position: relative;
+  left: 336px;
+}
+
+#taskText, #amount, #scaler {
+  position: relative;
+  width: 100px;
+  left: 336px;
+}
+
+.error {
+  border: 1px solid #FF4003;
+}
+
+.form-group {
+    position: relative;
+}
+
+#worker {
+  color: #828282;
+}
+
+#workerArrow {
+  position: absolute;
+  width: 13px;
+  height: 7.15px;
+  left: 588px;
+  transform: translate(0,-50%);
+  top: 14px;
+  cursor: text;
+  pointer-events: none
+}
+
+
+.errorMessage {
+  z-index: 9;
+  color: #FF4003;
+  position: absolute;
+  bottom:-15px;
+  left: 340px;
+  font-size: 12px;
+  font-family: Source Sans Pro;
+  line-height: 15px;
+}
+
+.form-group > label{
+  font-family: Source Sans Pro;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  color: #828282;
+  position:absolute;
+  top:-10px;
+  left:346px;
+  padding: 0 4px;
+  z-index: 8;
+  background-color:white;
+}
+  
+::placeholder {
+  color: #828282;
+}
+  
+.dropdownContent {
+  z-index: 10;
+  position: absolute;
+  left: 344px;
+  transform: translate(0, -10px);
+  padding: 0;
+  margin: 0;
+  border: 1px solid #D6E2F5;
+  box-sizing: border-box;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.04);
+  border-radius: 3px;
+}
+
+.dropdownContent a {
+  display: block;
+}
+
+.dropdownContent div > .workerImg {
+  width: 30px;
+  margin-left: 20px;
+  border-radius: 100px;
+}
+
+.dropdownContent #workerList {
+  border: 1px solid #F2F4F8;;
+}
+
+.dropdownContent #search {
+  border: 1px solid #F2F4F8;;
+  padding: 5px 0;
+  text-align: center;
+  position: relative;
+}
+
+#search > #vector {
+  position: absolute;
+  top:50%;
+  transform: translate(0,-50%);
+  left: 236px;
+  cursor: text;
+  pointer-events: none
+}
+
+#searchInput {
+  background-color: #F2F4F8;;
+  border: 2px solid white;
+  width: 256px;
+  height: 30px;
+}
+
+.dropdownContent #workerList .worker {
+  position: relative;
+  padding: 3px 0;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.dropdownContent #workerList div:hover {
+  background-color: #F2F4F8;
+}
+
+.dropdownContent .worker > div {
+  position: absolute;
+  top:50%;
+  left: 30%;
+  transform: translate(0, -50%);
+}
+
+table { 
+  border-collapse: collapse; 
+  position: relative;
+  left: 336px;
+  margin-top: 40px;
+  display: inline-block;
+}
+
+tr > td,th {
+  padding: 15px 20px;
+  width: 150px;
+}
+
+th > div{
+  display: inline-block;
+  padding-left: 10px;
+}
+
+th > div > .arrowSortUp {
+  display: block;
+  padding-bottom: 2px;
+}
+
+th > div > .arrowSortDown {
+  display: block;
+  padding-top: 2px;
+}
+
+.arrowSortUp {
+  transform: rotate(180deg);
+}
+
+tr.border {
+  border: 1px solid #D6E2F5;
+}
+
+tr.taskBorder {
+  border-left: 1px solid #D6E2F5;
+  border-bottom: 1px solid #D6E2F5;
+  border-right: 1px solid #D6E2F5;
+}
+
+td.delete, tr > th {
+  cursor: pointer;
+  position: relative;
+  text-align: left;
+}
+
+.delete, #option {
+  text-align: center !important;
+}
+
+
+.delete > img {
+  padding-right: 7px;
+}
+
+td.delete {
+  position: absolute;
+}
+
+.delete > * {
+  display: inline-block;
+  top:50%;
+}
+
+.delete > div {
+  transform: translate(0,-20%);
+}
+
+#scaler {
+  display: inline-block;
+}
+
+#addTaskBtn {
+  width: 92px;
+  position: relative;
+  left: 420px;
+  background: #00447C;
+  border-radius: 3px;
+  border: 2px solid #00447C;
+  color: white;
+  padding: 5px 0;
+  cursor: pointer;
+}
+
+#taskText {
+  margin-top: 40px;
+}
+
+#amount {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.checked {
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
